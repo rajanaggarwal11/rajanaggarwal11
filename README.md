@@ -1,6 +1,6 @@
 ### Rajan Aggarwal
 
-I ship products end to end, and open-source the parts I got tired of rewriting.
+I build open-source developer tools that catch what fails silently.
 
 ---
 
@@ -26,4 +26,4 @@ There's a [GitHub Action](https://github.com/rajanaggarwal11/catalog-doctor-acti
 
 #### Next
 
-A transactional outbox for Postgres and TypeScript, and an ERD generator for Drizzle schemas. Both are pieces I got tired of rewriting.
+A transactional outbox for Postgres and TypeScript, and an ERD generator for Drizzle schemas. Same theme: failures that stay quiet until they don't.
