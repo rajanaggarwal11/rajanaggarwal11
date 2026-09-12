@@ -1,6 +1,6 @@
 ### Rajan Aggarwal
 
-Correctness at the database boundary — multi-tenant isolation, row-level security, and the failures that pass every test.
+I build infrastructure for TypeScript systems — tenant isolation, dependency resolution, transactional delivery. The layers where a failure doesn't announce itself.
 
 ---
 
@@ -30,9 +30,10 @@ With a [GitHub Action](https://github.com/rajanaggarwal11/catalog-doctor-action)
 
 #### Next
 
-A transactional outbox for Postgres and TypeScript, and an ERD generator for Drizzle schemas.
+**outbox-pg** — the transactional outbox pattern with a relay that isolates failures instead of stalling the queue behind one poison message. **drizzle-erd** — an entity-relationship diagram generated from a live schema rather than a stale diagram in a wiki.
 
 ---
 
-Every default in these has a reason written down next to it, usually because the
-alternative failed quietly somewhere real first.
+Different layers, same problem: correctness where nothing errors. Every default in
+these has a reason written next to it, usually because the alternative failed
+quietly somewhere real first.
