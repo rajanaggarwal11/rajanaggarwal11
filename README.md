@@ -1,6 +1,6 @@
 ### Rajan Aggarwal
 
-Developer tooling and product engineering — TypeScript, Postgres, and the machinery that keeps large monorepos honest.
+I ship products end to end, and open-source the parts I got tired of rewriting.
 
 ---
 
