@@ -14,4 +14,6 @@ Infrastructure for TypeScript systems — what an AI agent is told, what an app 
 **[catalog-doctor](https://github.com/rajanaggarwal11/catalog-doctor)** — health check for pnpm workspaces. Finds dependency drift and fixes what has a single correct answer.
 `npx catalog-doctor` · [GitHub Action](https://github.com/rajanaggarwal11/catalog-doctor-action)
 
+Available for audits — Postgres tenant isolation, MCP servers, what your agents send. [aggarwal11.rajan05@gmail.com](mailto:aggarwal11.rajan05@gmail.com)
+
 Next: a transactional outbox for Postgres.
