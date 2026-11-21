@@ -11,9 +11,10 @@ Infrastructure for TypeScript systems — what an AI agent is told, what an app 
 **[pgrls](https://github.com/rajanaggarwal11/pgrls)** — Postgres row-level security you can actually verify. One assertion that asks Postgres which tables are exposed, and refuses to pass as a superuser.
 `npm install pgrls` · `npx pgrls audit` · [GitHub Action](https://github.com/rajanaggarwal11/pgrls-action)
 
+**[pgrelay](https://github.com/rajanaggarwal11/pgrelay)** — a transactional outbox for Postgres that proves it. Events commit with your data or not at all, a late commit is never skipped, one event per key at a time across every relay — and the tests `kill -9` relays mid-delivery to show nothing is lost.
+`npm install pgrelay` · `npx pgrelay status`
+
 **[catalog-doctor](https://github.com/rajanaggarwal11/catalog-doctor)** — health check for pnpm workspaces. Finds dependency drift and fixes what has a single correct answer.
 `npx catalog-doctor` · [GitHub Action](https://github.com/rajanaggarwal11/catalog-doctor-action)
 
-Available for audits — Postgres tenant isolation, MCP servers, what your agents send. [aggarwal11.rajan05@gmail.com](mailto:aggarwal11.rajan05@gmail.com)
-
-Next: a transactional outbox for Postgres.
+Available for audits — Postgres tenant isolation, event delivery, MCP servers, what your agents send. [aggarwal11.rajan05@gmail.com](mailto:aggarwal11.rajan05@gmail.com)
