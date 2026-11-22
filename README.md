@@ -1,20 +1,13 @@
-### Rajan Aggarwal
+I build small, well-tested tools for the parts of TypeScript systems that fail quietly: what an app sends to the model, and what Postgres lets each tenant see.
 
-Infrastructure for TypeScript systems — what an AI agent is told, what an app tells the model, tenant isolation. The layers where a failure doesn't announce itself.
+**[tokenwire](https://github.com/rajanaggarwal11/tokenwire)**: see exactly what your app sends to Anthropic or OpenAI, and lint it. On one Claude Code task, 27 of 29 tool definitions were never called and cost 22,302 tokens a turn. In CI, [its Action](https://github.com/rajanaggarwal11/tokenwire-action) comments on each pull request with the tokens it adds and the exact character that breaks the prompt cache.
 
-**[tokenwire](https://github.com/rajanaggarwal11/tokenwire)** — what are you actually sending the model? A local proxy that lints every request to Anthropic or OpenAI: unused tool definitions, cache misses and the character that broke them, secrets, injection in tool results. Never modifies a request. Run it on Claude Code and see 29 tools cost 26k tokens a turn. In CI it is size-limit for prompts: every PR gets the tokens it adds per request, the prompt-cache break to the character, and the cost — recorded offline, no API key.
-`npx tokenwire wrap -- claude -p "hello"` · [GitHub Action](https://github.com/rajanaggarwal11/tokenwire-action)
+**[pgrls](https://github.com/rajanaggarwal11/pgrls)**: one test that asks Postgres which tables a tenant can see past row-level security, including the table-owner bypass. It refuses to pass when run as a superuser.
 
-**[mcpcheck](https://github.com/rajanaggarwal11/mcpcheck)** — correctness checks for MCP servers. Reads exactly what the model reads and flags injected instructions, contract drift, and tools that hand the model a shell. Never calls a tool. Two of the eight most-downloaded servers on npm hand the model a terminal.
-`npx mcpcheck node ./server.js` · [GitHub Action](https://github.com/rajanaggarwal11/mcpcheck-action)
+**[pgrelay](https://github.com/rajanaggarwal11/pgrelay)**: a transactional outbox for Postgres. The test suite kills relays mid-delivery 24 times; no event is lost and every key stays in order.
 
-**[pgrls](https://github.com/rajanaggarwal11/pgrls)** — Postgres row-level security you can actually verify. One assertion that asks Postgres which tables are exposed, and refuses to pass as a superuser.
-`npm install pgrls` · `npx pgrls audit` · [GitHub Action](https://github.com/rajanaggarwal11/pgrls-action)
+**[mcpcheck](https://github.com/rajanaggarwal11/mcpcheck)**: lint an MCP server the way the model reads it: injected instructions, tools that run shell commands or code, and breaking changes to its tools.
 
-**[pgrelay](https://github.com/rajanaggarwal11/pgrelay)** — a transactional outbox for Postgres that proves it. Events commit with your data or not at all, a late commit is never skipped, one event per key at a time across every relay — and the tests `kill -9` relays mid-delivery to show nothing is lost.
-`npm install pgrelay` · `npx pgrelay status`
+**[catalog-doctor](https://github.com/rajanaggarwal11/catalog-doctor)**: find and fix dependency drift in pnpm workspaces.
 
-**[catalog-doctor](https://github.com/rajanaggarwal11/catalog-doctor)** — health check for pnpm workspaces. Finds dependency drift and fixes what has a single correct answer.
-`npx catalog-doctor` · [GitHub Action](https://github.com/rajanaggarwal11/catalog-doctor-action)
-
-Available for audits — Postgres tenant isolation, event delivery, MCP servers, what your agents send. [aggarwal11.rajan05@gmail.com](mailto:aggarwal11.rajan05@gmail.com)
+Contact: [aggarwal11.rajan05@gmail.com](mailto:aggarwal11.rajan05@gmail.com)
