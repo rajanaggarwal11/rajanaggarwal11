@@ -4,7 +4,7 @@ I build small, well-tested tools for the parts of TypeScript systems that fail q
 
 **[pgrls](https://github.com/rajanaggarwal11/pgrls)**: one test that asks Postgres which tables a tenant can see past row-level security, including the table-owner bypass. It refuses to pass when run as a superuser.
 
-**[pgrelay](https://github.com/rajanaggarwal11/pgrelay)**: a transactional outbox for Postgres. The test suite kills relays mid-delivery 24 times; no event is lost and every key stays in order.
+**[pgoutbox](https://github.com/rajanaggarwal11/pgoutbox)**: a transactional outbox for Postgres. The test suite kills relays mid-delivery 24 times; no event is lost and every key stays in order.
 
 **[mcpcheck](https://github.com/rajanaggarwal11/mcpcheck)**: lint an MCP server the way the model reads it: injected instructions, tools that run shell commands or code, and breaking changes to its tools.
 
